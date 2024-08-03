@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short-circuit Evaluation</title>
+</head>
+<body>
+    <h1>Short-circuit Evaluation</h1>
+    <p>Short-circuit Evaluation in javascript refers to the process of evaluating logical expressions in a way that stop as soon as the result is determined this is commonly used with the logical `&&` (AND) and `||`(OR) operators</p>
+    
+    <label for="QuestionLevel">
+        <b>
+            Question Level :  
+        </b>
+        Hard
+    </label>
+    <br>
+
+    <label for="Question ">
+        <b>
+            Question :  
+        </b>
+        Explain short-circuit evaluation in the context of if statements. Provide an example
+    </label>
+    <br>
+
+    <label for="Logic ">
+        <b>
+            Logic :  
+        </b>
+        Short-circuit evaluation  javascipt m ek process hota h logical expression ko evaluate karne ka jisse jaise hi results aye process rukh jaye yeh zadatar logical AND aur logical OR ke sath use hota 
+    </label>
+    <br>
+
+    <label for="Answer">
+        <b>
+            <i>
+                Answer :
+            </i>
+        </b>
+    </label>
+    <br>
+
+    <h2><b>Short-circuit Evaluation with `&&` (AND)</b></h2>
+    <P>For The `&& operator`, expression is evaluated from left to right if any operand is falsy the evaluation stops and returns that falsy value because the entire expression can never be true if at least one operand is false</P>
+    <textarea name="And" id="And" style="width: 475px; height: 141px; resize: none;">
+        const user = {
+            name :"Mustafa",
+            Age :20
+        };
+
+        if(user && user.name){
+            document.write("User has a name : ",user.name);
+        }
+    </textarea>
+    <!-- Script for Evaluation with `&&` -->
+    <script>
+        const user = {
+                name :"Mustafa",
+                Age :20
+            };
+    
+            if(user && user.name){
+                document.write("</br>User has a name : ",user.name);
+            }
+    </script>
+
+    <!--  -->
+    <h2><b>Short-circuit Evaluation with `||` (OR)</b></h2>
+    <P>For the `||` operator, the expression is evaluated from left to right. if any operand is truthy,the evaluation stops and returns that truthy value ,because the entire expression is guaranteed to be true if at least one operand is true</P>
+    <textarea name="And" id="And" style="width: 475px; height: 80px; resize: none;">
+        const username = "";
+        const displayname = username || "Guest";
+
+        document.write("<br>Welcome, "+ displayname);
+    </textarea>
+    <!-- Script for Evaluation with `||` -->
+    <script>
+        const username = "";
+        const displayname = username || "Guest";
+        document.write("<br>Welcome, "+displayname);
+    </script>
+
+</body>
+
+</html>

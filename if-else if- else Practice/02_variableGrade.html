@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If -else if -else Statement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<style>
+    body{
+        background-color: rgb(43, 42, 42);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+        Example of if -else if -else statement in javascript
+    </h1>
+    <p>
+        we are going to take an example of if -else if -else statement in javascript
+        that checks the value of a variable of a grade we will pass a grade in js code and compare it with grades.
+    </p>
+    
+    
+    <label for="pre"><b>Question : Write an example of an if-else if-else statement that checks the value of a variable grade.</b></label><br>
+    <!-- Syntax print block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        if(condition)
+        {
+            //Block of Code to be executed if condion is true in ()
+        }
+        else if(condition)
+        {
+            //Block of Code to be executed if condion is true in ()
+        }
+        else
+        {
+            //Block of code if condition is false in ()
+        }
+        </code>
+    </pre>
+    <!-- actual code printing block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            var grade = 80;
+
+            if(grade>=90){
+                document.write("Grade A");
+            }
+            else if(grade>=80){
+                document.write("Grade B");
+            }
+            else if(grade>=70){
+                document.write("Grade C");
+            }
+            else if(grade>=60){
+                document.write("Grade D");
+            }
+            else{
+                document.write("Grade F");
+            }
+        </code>
+    </pre>
+
+        <script>
+             document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+        var grade = 80;
+
+        if(grade>=90){
+            document.write("Grade A");
+        }
+        else if(grade>=80){
+            document.write("Grade B");
+        }
+        else if(grade>=70){
+            document.write("Grade C");
+        }
+        else if(grade>=60){
+            document.write("Grade D");
+        }
+        else{
+            document.write("Grade F");
+        }
+        </script>
+</body>
+</html>

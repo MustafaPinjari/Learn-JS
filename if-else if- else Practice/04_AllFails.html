@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If -else if -else Statement</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(43, 42, 42);
+        color: white;
+      }
+      .container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="justify-content: left">
+      Example of if -else if -else statement in javascript
+    </h1>
+    <p>
+      we are going to take an example of if -else if -else statement in
+      javascript to demonstrate what if no condition matched in `if -else if-else is true`
+    </p>
+
+    <p>
+      In JavaScript ,if none condition in an `if -else if-else` statment are true ,and there is no `else` block provided , nothing happens. the code simply skips over the entire `if -else if -else` construct and continues executing the rest of the code
+    </p>
+    <label for="pre">
+        <b>Question : What happens if none of the conditions in an if-else if-else statement are true?</b>
+    </label>
+    <br />
+
+    <div class="container">
+      <!-- Syntax print block -->
+      <pre>
+            <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+    let x = 10;
+      if(x<5)
+      {
+        //Block of Code to be executed if condition is true in ()
+      }
+      else if(x>15)
+      {
+        //Block of Code to be executed if condition is true in ()
+      }
+      else if(x===20)
+      {
+        //Block of Code to be executed if condition is true in ()
+      }
+      else
+      {
+        //Block of Code to be executed if all condition is false in ()
+      }
+
+      document.write ("End Of the")
+    </code>
+</pre>
+      <!-- actual code printing block -->
+      <pre>
+    <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+    let x = 10;
+      if(x<5)
+      {
+        document.write("x is less than 5");
+      }
+      else if(x>15)
+      {
+        document.write("x is greater then 15");
+      }
+      else if(x===20)
+      {
+        document.write("x is equal to 20");
+      }
+      else
+      {
+        document.write("None of the conditions are true")
+      }
+
+      document.write ("End Of the")
+    </code>
+</pre>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+
+      let x = 10;
+      if(x<5)
+      {
+        document.write("x is less than 5");
+      }
+      else if(x>15)
+      {
+        document.write("x is greater then 15");
+      }
+      else if(x===20)
+      {
+        document.write("x is equal to 20");
+      }
+      else
+      {
+        document.write("None of the conditions are true<br>")
+      }
+
+      document.write ("End Of the Program")
+    </script>
+  </body>
+</html>

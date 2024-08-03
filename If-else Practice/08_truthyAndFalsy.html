@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy</title>
+</head>
+<body>
+    <h1>Truthy and Falsy</h1>
+    <p>
+        In JavaScript, the concept of "truthy" and "falsy" values are essential to understanding how conditions are evaluated.
+        these terms refer to how non-boolean values are treated when JavaScript is evaluated expects a boolean such as in conditionals or loops
+    </p>
+    <label for="QuestionLevel">
+        <b>
+            Question Level :  
+        </b>
+        Intermidiate
+    </label>
+    <br>
+
+    <label for="Question ">
+        <b>
+            Question :  
+        </b>
+        Discuss the concept of truthy and falsy values in JavaScript conditions.
+    </label>
+    <br>
+
+    <label for="Answer">
+        <b>
+            <i>
+                Answer :
+            </i>
+        </b>
+    </label>
+    <br>
+    <!-- falsy -->
+    <h2><b>Falsy Values </b></h2>
+    <p>A Falsy value is one that is considered false when encountered in a boolean context
+        there are 6 falsy values in javascript
+    </p>
+        <ol>
+            <li>False : The Boolean is false</li>
+            <li>'0' : The number Zero</li>
+            <li>'-0' : The number Negative Zero</li>
+            <li>` "" ` or ` '' ` or ``` : The empty string</li>
+            <li>`Null` : Represents the intentional absence of any object value</li>
+            <li>`undefined` : A Variable that has been declared but not assigned value</li>
+            <li>`NaN` : Represents Not-a-Number</li>
+        </ol>
+
+        <pre>
+        <textarea name="falsyCode" id="falsyCode" style="width: 602px; height: 382px; resize: none;">
+                if (false) {
+                    console.log("This will not print.");
+                  }
+                  
+                  if (0) {
+                    console.log("This will not print.");
+                  }
+                  
+                  if ("") {
+                    console.log("This will not print.");
+                  }
+                  
+                  if (null) {
+                    console.log("This will not print.");
+                  }
+                  
+                  if (undefined) {
+                    console.log("This will not print.");
+                  }
+                  
+                  if (NaN) {
+                    console.log("This will not print.");
+                  }                  
+                </textarea>
+            </pre>
+
+            <p>Any Value that is not falsy is considered Truthy</p>
+            <!-- Truthy -->
+
+            <h2><b>Truthy Values </b></h2>
+    <p>A truthy value is one that is considered true when enciuntered in a boolean context
+    </p>
+        <ol>
+            <li>Non-Zero numbers(Both positive and negative)</li>
+            <li>Non-empty strings</li>
+            <li>Objects and arrays(even if they are empty)</li>
+            <li>`true`</li>
+        </ol>
+
+        <pre>
+        <textarea name="TruthyCode" id="TruthyCode" style="width: 602px; height: 382px; resize: none;">
+            if (true) {
+                console.log("This will print.");
+              }
+              
+              if (42) {
+                console.log("This will print.");
+              }
+              
+              if ("hello") {
+                console.log("This will print.");
+              }
+              
+              if ({}) {
+                console.log("This will print.");
+              }
+              
+              if ([]) {
+                console.log("This will print.");
+              }               
+                </textarea>
+            </pre>
+</body>
+<script>
+    function isFieldFilled(FieldValue)
+    {
+        if(FieldValue){
+                return true;
+            }
+            else{
+                return false;
+            }
+    }
+
+    console.log(isFieldFilled("Example")); // true (truthy)
+    console.log(isFieldFilled("")); // false (falsy)
+    console.log(isFieldFilled(123)); // true (Truthy)
+    console.log(isFieldFilled(0)); //false (falsy)
+    </script>
+</html>

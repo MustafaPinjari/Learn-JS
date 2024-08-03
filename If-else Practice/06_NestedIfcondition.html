@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If Conditon</title>
+</head>
+<body>
+    <h1>Nested If Conditon</h1>
+    <p>Nested If Condition is if block within a if block and goes on till the requierments</p>
+
+    <label for="QuestionLevel">
+        <b>
+            Question Level :  Intermidiate
+        </b>
+    </label>
+    <br>
+
+    <label for="Question ">
+        <b>
+            Question :  Give an example of nested if statements in JavaScript.
+        </b>
+    </label>
+    <br>
+
+    <label for="Answer">
+        <b>
+            <i>
+                Answer :
+            </i>
+        </b>
+    </label>
+    <br>
+
+    <label for="Logic">
+        <strong>
+            Logic : assume ki ek student h uska agar bca h to uska specialization ky h agar wo sahi h to uska div konsa h agar wo sahi h to bench konsa h
+        </strong>
+    </label>
+    <br>
+
+    <label for="Syntax">
+        <b>
+            Syntax :
+        </b>
+    </label>
+    <pre>
+        if(Conditon)
+        {
+            //MoreCondition
+            if(Condtion)
+            {
+                if(condition)
+                {
+                    if(condtion)
+                    {
+                        //More to Come
+                    }
+                }
+            }
+        }
+    </pre>
+    <label for="Example">
+        <b>
+            Example :
+        </b>
+    </label>
+    <pre>
+        var course = "BCA";
+        var spec = "None";
+        var div = "B";
+        var benchNum = "2";
+    
+        if (course == "BCA")
+        {
+            if(spec == "None")
+                {
+                    if(div == "B") 
+                        {
+                            if(benchNum ==2)
+                                {
+                                    document.write("Sit in your Respective class c5");
+                                }
+                        }
+                }
+        }
+
+    </pre>
+
+</body>
+<script>
+    var course = "BCA";
+    var spec = "None";
+    var div = "B";
+    var benchNum = "2";
+
+    if (course == "BCA")
+    {
+        if(spec == "None")
+            {
+                if(div == "B") 
+                    {
+                        if(benchNum ==2)
+                            {
+                                document.write("Sit in your Respective class c5");
+                            }
+                    }
+            }
+    }
+</script>
+</html>

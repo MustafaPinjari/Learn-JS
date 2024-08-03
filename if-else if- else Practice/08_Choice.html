@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If -else if -else Statement</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(43, 42, 42);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="justify-content: left">
+      Difference between If-else if-else VS switch statement
+    </h1>
+
+    <label for="pre">
+      <b
+        >Question : Describe the difference between using if-else if-else versus
+        a switch statement. When would you choose one over the other?</b
+      > </label
+    ><br />
+
+    <label for="pre">
+      <b>Answer : </b> </label
+    ><br />
+
+    <p>
+      The choice between using if-else if-else and a switch statement in
+      JavaScript depends on the specific use case, readability, and
+      maintainability <br />of your code. Here’s a detailed comparison of the
+      two, along with guidance on when to use each:
+    </p>
+
+    <ul>
+      <li>
+        <h2>If-Else If-Else Statements</h2>
+        <ol>
+          <li>
+            Characteristicsbr
+
+            <ol>
+              <br />Flexibilty :
+              <br />
+              Allows for more complex checking ,including logic operators,rage
+              checks,and combinations of different conditions
+            </ol>
+            <ol>
+              <br />
+              Syntax :
+              <br />
+              Uses individual `if`,`else-if`,and `else` blocks to handle
+              different condition
+            </ol>
+            <br />
+            <label for="pre">
+              <b>Example : </b> </label
+            ><br />
+            <!-- Example -->
+            <pre>
+                        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                            if (condition1) {
+                                // Code for condition1
+                            } else if (condition2) {
+                                // Code for condition2
+                            } else if (condition3) {
+                                // Code for condition3
+                            } else {
+                                // Code for none of the above conditions
+                            }                            
+                        </code>
+                    </pre>
+          </li>
+
+          <li>
+            Pros
+            <ol>
+              <br />Complex Conditions :
+              <br />
+              Can handle complex and varied conditions.
+            </ol>
+            <br />
+            <ol>
+              Nested Conditions:
+              <br />
+              Allows nesting of conditions within each block.
+            </ol>
+            <br />
+          </li>
+
+          <li>
+            Cons
+            <ol>
+              <br />Readability :
+              <br />
+              Can become difficult to read and maintain with many conditions.
+            </ol>
+            <br />
+            <ol>
+              Performance :
+              <br />
+              May be less efficient if evaluating multiple unrelated conditions
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <br />
+
+      <li>
+        <h2>Switch Statements</h2>
+        <ol>
+          <li>
+            Characteristics <br />
+
+            <ol>
+              <br />
+              Simplicity :
+
+              <br />
+              Best suited for checking a single variable against multiple
+              possible values.
+            </ol>
+            <ol>
+              <br />
+              Syntax :
+              <br />
+              Uses case statements within a switch block to handle different
+              conditions.
+            </ol>
+            <br />
+            <label for="pre">
+              <b>Example : </b> </label
+            ><br />
+            <!-- Example -->
+            <pre>
+                        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                            switch (variable) {
+                                case value1:
+                                    // Code for value1
+                                    break;
+                                case value2:
+                                    // Code for value2
+                                    break;
+                                case value3:
+                                    // Code for value3
+                                    break;
+                                default:
+                                    // Code for default case
+                            }                                                        
+                        </code>
+                    </pre>
+          </li>
+
+          <li>
+            Pros
+            <ol>
+              <br />Readability :
+              <br />
+              Easier to read and understand when checking a single variable
+              against multiple values.
+            </ol>
+            <br />
+            <ol>
+              Maintainability :
+              <br />
+              Clear structure makes it easy to add or remove cases.
+            </ol>
+            <br />
+            <ol>
+              Performance :
+              <br />
+              Can be more efficient for certain types of condition checks.
+            </ol>
+            <br />
+          </li>
+
+          <li>
+            Cons
+            <ol>
+              <br />Limited Flexibility :
+              <br />
+              Not suitable for complex conditions or multiple variables.
+            </ol>
+            <br />
+            <ol>
+              Duplication :
+              <br />
+              May require duplicating code if multiple cases should execute the
+              same block.
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <br />
+    <br />
+    <ol>
+      <li>
+        <h3>When to Use If-Else If-Else</h3>
+        <ol>
+          <li>
+            Complex Conditions: <br />
+            When you need to check complex conditions involving multiple
+            variables, ranges, or logical operators.
+          </li>
+          <li>
+            Nested Logic: <br />When you need to perform additional checks
+            within a specific condition block.
+          </li>
+          <li>
+            Dynamic Conditions: <br />When conditions are dynamic or not based
+            on a single variable.
+          </li>
+        </ol>
+        <!-- example -->
+        <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    if (user.age > 18 && user.isMember) {
+                        // Code for adult members
+                    } else if (user.age > 18 && !user.isMember) {
+                        // Code for adult non-members
+                    } else if (user.age <= 18 && user.isMember) {
+                        // Code for minor members
+                    } else {
+                        // Code for minor non-members
+                    }                    
+                </code>
+            </pre>
+      </li>
+      <!-- For Switch Statement -->
+      <li>
+        <h3>When to use a Switch Statement</h3>
+        <ol>
+          <li>
+            Single Variable Check: <br />When you are checking a single variable
+            against multiple possible values.
+          </li>
+          <li>
+            Enumerated Values: <br />When you have a known set of possible
+            values for a variable (e.g., enums, specific strings, or numbers).
+          </li>
+          <li>
+            Readability: <br />When you want to improve readability and
+            maintainability for simple condition checks.
+          </li>
+        </ol>
+        <!-- example -->
+        <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    switch (user.role) {
+                        case 'admin':
+                            // Code for admin
+                            break;
+                        case 'editor':
+                            // Code for editor
+                            break;
+                        case 'viewer':
+                            // Code for viewer
+                            break;
+                        default:
+                            // Code for unknown role
+                    }                                   
+                </code>
+            </pre>
+      </li>
+    </ol>
+
+    <h3>Summary</h3>
+    <br />
+    <ul>
+      <li>
+        Use If-Else If-Else: For complex, dynamic, or nested conditions
+        involving multiple variables.
+      </li>
+      <li>
+        Use Switch: For simple checks against a single variable with known,
+        discrete values, to improve readability and maintainability.
+      </li>
+    </ul>
+    <p>
+      Choosing the right approach depends on the specific needs of your code and
+      the complexity of the conditions you need to evaluate.
+    </p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+  </body>
+</html>

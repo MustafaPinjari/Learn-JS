@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between If - Else Statements</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: aqua;
+        }
+        table, th, td {
+            border: 3px solid rgb(115, 201, 201);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #b1b1b1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Difference Between If - Else Statements</h1>
+    <p>There are differences between `if` and `else` statements. Let's discuss them one by one.</p>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>if</th>
+            <th>else</th>
+        </tr>
+        <tr>
+            <td>Purpose</td>
+            <td>Used to specify a block of code to be executed if a specified condition is true.</td>
+            <td>Used to specify a block of code to be executed if the same condition is false.</td>
+        </tr>
+        <tr>
+            <td>Syntax</td>
+            <td><code>if (condition) {<br>    // code to be executed if condition is true<br>}</code></td>
+            <td><code>else {<br>    // code to be executed if the same condition is false<br>}</code></td>
+        </tr>
+        <tr>
+            <td>Usage Example</td>
+            <td>
+                <pre>
+var age = 20;
+if (age >= 18) {
+    document.write("You are an Adult");
+}
+                </pre>
+            </td>
+            <td>
+                <pre>
+var age = 20;
+if (age >= 18) {
+    document.write("You are an Adult");
+} else {
+    document.write("You are not an Adult");
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Condition</td>
+            <td>Requires a condition to be evaluated to true for the code block to execute.</td>
+            <td>Does not require a condition, executes only if the preceding `if` condition is false.</td>
+        </tr>
+        <tr>
+            <td>Code Execution</td>
+            <td>Code inside the `if` block runs if the condition is true.</td>
+            <td>Code inside the `else` block runs if the `if` condition is false.</td>
+        </tr>
+    </table>
+
+    <br>
+    <label for="CodeOutput"><b>Code Output:</b></label>
+    <br>
+    <script>
+        var age = 20;
+        if (age >= 18) {
+            document.write("You are an Adult");
+        } else {
+            document.write("You are not an Adult");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If -else if -else Statement</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(43, 42, 42);
+        color: white;
+      }
+      .container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="justify-content: left">
+      Example of if -else if -else statement in javascript
+    </h1>
+    <p>
+      we are going to take an example of if -else if -else statement in
+      javascript to Discuss best practices for structuring complex if-else if-else logic
+    </p>
+
+    <p>
+        When dealing with complex `if-else if-else` logic, in JavaScript, it's essential to maintain readability ,scalability, and ease of debbuging.here are some best practices to follow :
+    </p>
+
+    <ol>
+        <!-- 1 -->
+        <li>
+            Use Proper indentation and formating
+            <ul>
+                <li>
+                Ensure Your code is properly indented and formatted .this makes it Easier to read and understand the flow of logic
+
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    if (condition1) {
+                        // Code for condition1
+                    } else if (condition2) {
+                        // Code for condition2
+                    } else if (condition3) {
+                        // Code for condition3
+                    } else {
+                        // Code for none of the above conditions
+                    }
+                    
+                </code>
+              </pre>
+        </ul>
+        </li>
+
+        <!-- 2 -->
+        <li>
+            Avoid Deep Nesting
+            <ul>
+            <li>
+            Deeply nested `if-else` statment can be hard to follow .try to flatten the structure where possible    
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    if (condition1) {
+                        if (condition2) {
+                            if (condition3) {
+                                // Code
+                            } else {
+                                // Code
+                            }
+                        } else {
+                            // Code
+                        }
+                    } else {
+                        // Code
+                    }                    
+                    
+                </code>
+              </pre>
+              <p>Refactored to Avoid Deep Nesting</p>
+              <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    if (condition1 && condition2 && condition3) {
+                        // Code
+                    } else if (condition1 && condition2) {
+                        // Code
+                    } else if (condition1) {
+                        // Code
+                    } else {
+                        // Code
+                    }                                       
+                    
+                </code>
+              </pre>
+              
+        </ul>
+        </li>
+
+        <!-- 3 -->
+        <li>
+            Use Switch Statments for Multiple Conditions
+            <ul>
+            <li>
+            When You have multiple conditions based on the same variable, consider using a `switch` statment.
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    switch (variable) {
+                        case value1:
+                            // Code for value1
+                            break;
+                        case value2:
+                            // Code for value2
+                            break;
+                        case value3:
+                            // Code for value3
+                            break;
+                        default:
+                            // Code for default case
+                    }
+                                       
+                    
+                </code>
+              </pre>
+        </ul>
+        </li>
+
+        <!-- 4 -->
+        <li>
+            Extract Logic into functions
+            <ul>
+            <li>
+                If the code blocks inside `if-else` statemnets are large ,consider extracting them into seprate functions. this helps in maintaining clean and readable code
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    
+                    function handleCondition1() {
+                        // Code for condition1
+                    }
+                    
+                    function handleCondition2() {
+                        // Code for condition2
+                    }
+                    
+                    if (condition1) {
+                        handleCondition1();
+                    } else if (condition2) {
+                        handleCondition2();
+                    } else {
+                        // Code for other conditions
+                    }
+                                       
+                    
+                </code>
+              </pre>
+        </ul>
+        </li>
+
+        <!-- 5 -->
+        <li>
+            Use ternary Operator for simple Condition
+            <ul>
+            <li>
+            For Very Simple conditions ,the ternary Operator can make your code more concise.    
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    let result = condition ? valueIfTrue : valueIfFalse;
+                </code>
+            </pre>
+        </ul>
+        </li>
+
+        <!-- 6 -->
+        <li>
+            Use Logical Operator to combine Condition
+            <ul>
+            <li>
+                Combine conditions using logical operators (`&&` and `||`) to simplify your `if-else` logic
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    if (condition1 && condition2) {
+                        // Code for both conditions true
+                    } else if (condition1 || condition3) {
+                        // Code for either condition1 or condition3 true
+                    } else {
+                        // Code for other cases
+                    }
+                        
+                </code>
+            </pre>
+        </ul>
+        </li>
+
+        <!-- 7 -->
+        <li>
+            Consider Using Objects for Conditional Logic
+            <ul>
+            <li>
+                For certain scenarios, using an object to map conditions to corresponding actions can be more scalable and readable.
+            </li>
+            <pre>
+                <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                    const actions = {
+                        condition1: () => {
+                            // Code for condition1
+                        },
+                        condition2: () => {
+                            // Code for condition2
+                        },
+                        condition3: () => {
+                            // Code for condition3
+                        }
+                    };
+                    
+                    const condition = 'condition1';
+                    if (actions[condition]) {
+                        actions[condition]();
+                    } else {
+                        // Default code
+                    }
+                         
+                </code>
+            </pre>
+        </ul>
+        </li>
+    </ol>
+
+    <h2>Real-World Example</h2>
+
+    <p>
+        Suppose you’re writing a function to determine the discount rate based on the type of user and purchase amount.
+    </p>
+    <br/>
+
+    <label for="pre">
+        <b>Question : Discuss best practices for structuring complex if-else if-else logic.</b>
+    </label>
+    <br />
+
+    <div class="container">
+        <label for="pre">
+            <b>Initial Complex If-Else Logic : </b>
+        </label>
+      <!-- Syntax print block -->
+      <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            function getDiscount(userType, purchaseAmount) {
+                if (userType === 'regular') {
+                    if (purchaseAmount > 100) {
+                        return 10;
+                    } else if (purchaseAmount > 50) {
+                        return 5;
+                    } else {
+                        return 0;
+                    }
+                } else if (userType === 'premium') {
+                    if (purchaseAmount > 100) {
+                        return 20;
+                    } else if (purchaseAmount > 50) {
+                        return 10;
+                    } else {
+                        return 5;
+                    }
+                } else {
+                    return 0;
+                }
+            }
+            
+        </code>
+      </pre>
+      <!-- actual code printing block -->
+      <label for="pre">
+        <b>Refactored Using Functions and Objects :</b>
+    </label>
+      <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            const discountRates = {
+                regular: (amount) => {
+                    if (amount > 100) return 10;
+                    if (amount > 50) return 5;
+                    return 0;
+                },
+                premium: (amount) => {
+                    if (amount > 100) return 20;
+                    if (amount > 50) return 10;
+                    return 5;
+                }
+            };
+            
+            function getDiscount(userType, purchaseAmount) {
+                const discountFunction = discountRates[userType] || (() => 0);
+                return discountFunction(purchaseAmount);
+            }
+            
+        </code>
+        </pre>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+
+      
+    </script>
+  </body>
+</html>

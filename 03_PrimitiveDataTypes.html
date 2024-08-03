@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive DataTypes</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //1. String
+    let name = "Mustafa Pinjari";
+        console.log("String : ");
+        console.log(name);
+        console.log(typeof name);
+
+    //2. Number
+    let age = 20;
+    let height = 5.9;
+        console.log("\nNumber :");
+        console.log(age);
+        console.log(height);
+        console.log(typeof age);
+        console.log(typeof height);
+
+    //3. Boolean
+    let isStd = true;
+    let hasUG = false;
+        console.log("\nBoolean :");
+        console.log(isStd);
+        console.log(hasUG);
+        console.log(typeof isStd);
+        console.log(typeof hasUG);
+
+    //4. Null
+    let emptyValue = null;
+        console.log("\nNull :");    
+        console.log(emptyValue);
+        console.log(typeof emptyValue);
+
+    //5. Undefined
+    let UndefinedValue;
+        console.log("\nUndefined :");
+        console.log(UndefinedValue);
+        console.log(typeof UndefinedValue);
+
+
+    // Demonstrating usage in a function
+        function describePrimitive(value) 
+        {
+            console.log(`Value: ${value}, Type: ${typeof value}`);
+        }
+
+            console.log("\nDescribing Primitives:");
+            describePrimitive(name); // String
+            describePrimitive(age); // Number
+            describePrimitive(isStd); // Boolean
+            describePrimitive(emptyValue); // Null
+            describePrimitive(UndefinedValue); // Undefined
+</script>
+</html>

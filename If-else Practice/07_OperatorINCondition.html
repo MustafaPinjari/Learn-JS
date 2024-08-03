@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using &&Operator in If Condtion</title>
+</head>
+<body>
+    <h1>Using &&Operator in If Condtion</h1>
+    <p>
+        In JavaScript, you can combine multiple conditons using Logical Operators '&&' (AND)
+        and '||' (OR) in an 'if' statement.These operators allow you to create complex conditional logic
+    </p>
+    <ol>
+        <li>Logical AND('&&')</li>
+        <li>Logical OR('||')</li>
+    </ol>
+    
+    <!-- Question Level -->
+    <label for="QuestionLevel">
+        <b>
+            Question Level :  
+        </b>
+        Intermidiate
+    </label>
+    <br>
+
+    <label for="Question ">
+        <b>
+            Question : 
+        </b>
+        How can you combine multiple conditions using logical operators (&&, ||) in an if statement?
+    </label>
+    <br>
+
+    
+
+    <label for="Logic">
+        
+            <b>
+                Logic : <br>
+            </b>
+            Logical AND m agar dono value true hoti h tabhi Execute hota h Block agar ek value bhi false hoti h to wo block execute nahi hoga
+            <br>
+            Logical OR m agar dono value true hoti h to aur agar ek bhi true hoti h to block execute hoga agar dono false hojae to block execute nahi hoga
+        
+    </label>
+    <br>
+
+    <label for="Answer">
+        <b>
+            <i>
+                Answer :
+            </i>
+        </b>
+    </label>
+    <br>
+    <!-- Syntax -->
+    <label for="Syntax">
+        <b>
+            Syntax :
+        </b>
+    </label>
+    <pre>
+       <label for="Logical AND">
+    <b>
+    Logical AND :
+    </b>
+    </label>
+    <textarea name="And" id="And" style="width: 539px; height: 92px; resize: none;">
+
+    if(Condition1 && Condiont2)
+    {
+        //Code to be execute if both condition1 and conditon2 are true
+    }
+</textarea>
+</pre>
+
+        <!-- Example -->
+<pre>
+    <label for="Example">
+    <b>
+    Example :
+    </b>
+    </label>
+        <textarea name="AndAns" id="AndAns" style="width: 505px; height: 187px; resize: none;">
+            let age =20;
+            let hasDrivingLicense = true;
+        
+            if(age >=18 && hasDrivingLicense)
+                {
+                    document.write("You Can Drive");
+                }
+            else
+                {
+                    document.write("You Cannot Drive");
+                }
+        </textarea>
+    </pre>
+    <!-- For Logical OR -->
+    <pre>
+        <label for="Logical OR">
+     <b>
+     Logical OR :
+     </b>
+     </label>
+     <textarea name="OR" id="OR" style="width: 580px; height: 99px; resize: none;">
+ 
+     if(Condition1 || Condiont2)
+     {
+         //Code to be execute if any one condition1 and conditon2 are true
+     }
+ </textarea>
+ </pre>
+ 
+         <!-- Example -->
+ <pre>
+     <label for="Example">
+     <b>
+     Example :
+     </b>
+     </label>
+         <textarea name="ORAns" id="ORAns" style="width: 586px; height: 181px; resize: none;">
+            let isWeekend = true;
+            let isHoliday = false;
+            if(isWeekend || isHoliday)
+                {
+                    document.write("<b>Results of || Operators</b><br>");
+                    document.write("You can Chill Today.")
+                }
+            else
+                {
+                    document.write("You Have To Work Today.")
+                }
+         </textarea>
+     </pre>
+
+
+     <!-- Example of both Operator Combined -->
+
+     <pre>
+        <label for="Logical OR">
+     <b>
+     Logical OR and AND:
+     </b>
+     </label>
+     <textarea name="OR" id="OR" style="width: 580px; height: 99px; resize: none;">
+ 
+     if((Condition1) || (Condiont2))
+     {
+         //Code to be execute if any one condition1 and conditon2 are true
+     }
+ </textarea>
+ </pre>
+ 
+         <!-- Example -->
+ <pre>
+     <label for="Example">
+     <b>
+     Example :
+     </b>
+     </label>
+         <textarea name="ANDandORAns" id="ANDandORAns" style="width: 665px; height: 199px; resize: none;">
+            let age =20;
+            let hasDrivingLicense = true;
+            let hasParentPermission = true;
+            if((age>=18 && hasDrivingLicense) || hasParentPermission)
+            {
+                document.write("<br><b>Results of || and &&  Operators</b><br>");
+                document.write("You can drive with parental Permission");
+            }
+            else
+            {
+                document.write("You cannot Drive");
+            }
+         </textarea>
+     </pre>
+ 
+</body>
+<script>
+    // Logical AND
+    let age =20;
+    let hasDrivingLicense = true;
+
+    if(age >=18 && hasDrivingLicense)
+        {
+            document.write("<b>Results of && Operators</b><br>");
+            document.write("You Can Drive<br>");
+        }
+    else
+        {
+            document.write("You Cannot Drive");
+        }
+    //Logical OR 
+        let isWeekend = true;
+        let isHoliday = false;
+        if(isWeekend || isHoliday)
+            {
+                document.write("<b>Results of || Operators</b><br>");
+                document.write("You can Chill Today.")
+            }
+        else
+            {
+                document.write("You Have To Work Today.")
+            }
+
+    // Logical AND and OR
+    let hasParentPermission = true;
+    if((age>=18 && hasDrivingLicense) || hasParentPermission)
+    {
+        document.write("<br><b>Results of || and &&  Operators</b><br>");
+        document.write("You can drive with parental Permission");
+    }
+    else
+    {
+        document.write("You cannot Drive");
+    }
+
+</script>
+</html>

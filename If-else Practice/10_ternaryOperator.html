@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator instead of if-else</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+</head>
+<style>
+    body{
+        background-color: rgb(43, 42, 42);
+        color: rgb(212, 208, 208);
+    }
+</style>
+<body>
+    <h1><b>Ternary Operator instead of if-else</b></h1>
+    <p>
+        The Ternary operator `(condition ? expr1 : expr2)` in JavaScript provides a compact way to express conditional logic compared to traditional 'if-else' statements.
+        <br>
+        Here are several scenarios where using the Ternary operator might be more suitable than a regular 'if-else' statement:
+    </p>
+    <label for="QuestionLevel">
+        <b>Question Level:</b> Hard
+    </label>
+    <br>
+
+    <label for="Question">
+        <b>Question:</b> Describe scenarios where you might use the ternary operator (condition ? expr1 : expr2) instead of
+        a regular if-else statement.
+    </label>
+    <br>
+
+    <label for="Logic">
+        <b>Logic:</b> Dekho jo ternary operator h na wo hume multiple lines ka code ek line m likhne ki feature deta h bas hame pehle condition deni hogi fir do expression.
+    </label>
+    <br>
+
+    <label for="Answer">
+        <b>Answer:</b>
+    </label>
+    <br>
+    <!-- Start the list -->
+    <ol>
+        <!-- Assigning Values Conditionally -->
+        <li>Assigning Values Conditionally</li>
+        <pre><code class="language-javascript" style="background-color: black; width: 650px;"">
+            // Using ternary operator
+            const result = (age >= 18) ? "Adult" : "Not Adult";
+                    
+            // Equivalent to if-else statement
+            let result1;
+            if (age >= 18) {
+                result1 = "Adult";
+            } else {
+                result1 = "Not Adult";
+            }
+        </code></pre>
+        <p>
+            <i>Here, the ternary operator succinctly assigns the value of `result` based on the condition (`age >= 18`). It's clear and concise, especially when the logic is straightforward.</i>
+        </p>
+
+        <!--Inline Conditional Rendering in JSX (React)  -->
+        <li>Inline Conditional Rendering in JSX (React)</li>
+        <pre><code class="language-javascript" style="background-color: black; width: 650px;">
+            // Using ternary operator in JSX (React)
+            const greet = isLoggedIn ? <p>Welcome Back!!</p> : <p>Please Login</p>;
+
+            // Equivalent to if-else statement
+            let greet1;
+            if (isLoggedIn) {
+                greet1 = <p>Welcome Back!!</p>;
+            } else {
+                greet1 = <p>Please Login</p>;
+            }
+        </code></pre>
+        <p>
+            <i>In React or other frameworks using JSX, the ternary operator is commonly used for conditional rendering directly within the markup, keeping the code clean and readable.</i>
+        </p>
+
+        <!-- Returning Values From Functions -->
+        <li>Returning Values From Functions</li>
+        <pre><code class="language-javascript" style="background-color: black; width: 650px;">
+            // Using Ternary operators to return a value from a function 
+            function GetDiscount(isPremium) {
+                return isPremium ? 0.1 :0.05;
+            }
+    
+            //Equivalent to if-else statement
+            function GetDiscount(isPremium){
+                if(isPremium){
+                    return 0.1;
+                }
+                else{
+                    return 0.05;
+                }
+            }
+        </code></pre>
+        <p>
+            <i>When a function's return value depends on a condition, the ternary operator simplifies the implementation and reduces the amount of code.</i>
+        </p>
+
+        <!-- Setting Object Properties conditionally -->
+         <li>Setting Object Properties conditionally</li>
+         <pre>
+            <code class="language-javascript" style="background-color: black; width: 650px;">
+                // Using ternary operator to set object properties conditionally
+                const user ={
+                    isAdmin :(role==='admin') ? true : false,
+                    //Other Properties
+                };
+        
+                // equivalent to if else stat
+                const user={
+                    isAdmin : role ==='admin' ? true : false,
+                    //other Properties
+                };
+            </code>
+         </pre>
+         <p>
+             <i>
+                 when initializing objects,especially with properties that depends on conditions ,the ternary operator helps keep the object initialization concise
+                </i>
+        </p>
+
+        <!-- String Interpolation -->
+        <li>String Interpolation</li>
+        <pre>
+           <code class="language-javascript" style="background-color: black; width: 650px;">
+            const StatusMsg = isLoggedIn ? 'Hello,${username}!' : 'please login in';
+       
+            // Equivalent to is-else statement
+            let StatusMsg;
+            if(isLoggedIn){
+                StatusMsg ="Hello,${username}!";
+            }
+            else{
+                statusMsg = 'Please login in.';
+            }
+           </code>
+        </pre>
+        <p>
+            <i>
+                When Constructing Strings that depends on conditions,using the ternart operator can make the code more readable and compact    
+            </i>
+       </p>
+       
+        <!-- Array Operations -->
+        <li>Array Operations</li>
+        <pre>
+           <code class="language-javascript" style="background-color: black; width: 650px;">
+            // Using ternary operators for array operations
+            const allowedRoles = isAdmin ?['admin','editor'] :['user'];
+            
+            // Equivalent to if-else statment
+            let allowedRoles;
+            if(isAdmin){
+                allowedRoles =['admin','editor'];
+            }
+            else{
+                allowedRoles =['user'];
+            }
+           </code>
+        </pre>
+        <p>
+            <i>
+                When initializing arrays or perform array operations based on conditions based on conditions  
+            </i>
+       </p>
+
+
+    </ol>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

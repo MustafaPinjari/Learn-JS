@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between If - Else Statements</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background-color: aqua;
+        }
+        table,th,td{
+            border: 3px solid rgb(115, 201, 201);
+        }
+        th,td{
+            padding: 10px;
+            text-align: left;
+        }
+        th{
+            background-color: #b1b1b1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Difference Between If - Else Statements</h1>
+    <p>There are alot of Differnce betwwen If else Statements lets discusss them one by one</p>
+    <label for="Question ">
+        <b>
+            Question :  How do you execute code when an if condition is false? Provide an example.
+        </b>
+    </label>
+    <br>
+    <label for="Answer">
+        <b>
+            Answer : 
+        </b>
+    </label>
+    <!-- Table -->
+     <table>
+        <tr>
+            <th>Feature</th>
+            <th>if</th>
+            <th>else</th>
+        </tr>
+
+        <tr>
+            <td>Purpose :- </td>
+            <td>ued to specify a block of code to be executed if a specified condion is true</td>
+            <td>ued to specify a block of code to be executed if a specified condion is False</td>
+
+        </tr>
+        
+        <tr>
+            <td>Syntax</td>
+            <td><code>
+                if(condion)
+                {
+                    <br>//code to be executed if condition is true
+                }
+            </code></td>
+
+            <td>
+                <code>
+                    else
+                    {
+                        <br>//Code to be executed if condion is false
+                    }
+                </code>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Usage example
+            </td>
+            <td>
+                <pre>
+                    var age =20;
+                    if (age>=18)
+                        {
+                            document.write("You are Adult");
+                        }
+                </pre>
+            </td>
+
+            <td>
+                <pre>
+                    var age =20;
+                    if (age>=18)
+                        {
+                            document.write("You are Adult");
+                        }
+                        else
+                        {
+                            document.write("You are not adult");
+                        }
+                </pre>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Condiotn</td>
+            <td>Requires a condiotn to be evaluated to true for the code block to execute</td>
+            <td>Does not Require condition, executes only if the precending <code>if</code> conditon is false</td>
+        </tr>
+
+        <tr>
+            <td>Code Execution</td>
+            <td>Code inside the <code>if</code>block runs if the condiotn is true.</td>
+            <td>Code inside the <code>else</code> block runs if the <code>if</code>condtion is false</td>
+        </tr>
+     </table>
+
+     <br>
+    <label for="CodeOutput">
+        <b>
+            Code Output : 
+        </b>
+    </label>
+</body>
+
+<script>
+    var age =20;
+    if (age>=18)
+        {
+            document.write("You are Adult");
+        }
+        else
+        {
+            document.write("You are not adult");
+        }
+</script>
+</html>

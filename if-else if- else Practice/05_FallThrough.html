@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If -else if -else Statement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<style>
+    body{
+        background-color: rgb(43, 42, 42);
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+        Example of if -else if -else statement in javascript
+    </h1>
+    <p>
+        we are going to take an example of if -else if -else statement in javascript
+        to understan Explain the concept of 'fall-through' in if-else if-else statements. How can you prevent it?.
+    </p>
+
+    <p>
+        In JavaScript, The concept of `fall-through` is more releernt to `switch ` statements than  `if -else if -else` statment. However, in the context of  `if -else if -else` statement, we can talk about ensuring each condiotn is mutually exclusive to prevent multiple conditions from being true and potentially causing in code executuion .
+    </p>
+
+    <h2>If -else if -else statements</h2>
+    <p>In ` if -else if-else` statements, only one block of code willexecute :
+    </p>
+    <ul>
+        <li>The first `if` condition that evaluates to `true`.</li>
+        <li>If no `if` condiotn are `true`,the `else` block (if present) will execute</li>
+    </ul>
+
+    <li>There is no concept of `fall-through` in `if -else if -else` statement because they are designed to executed only one block of code.</li>
+    <br><br>
+    <label for="pre"><b>Question : Explain the concept of 'fall-through' in if-else if-else statements. How can you prevent it?</b></label><br>
+    <!-- Syntax print block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            let var1;
+            
+            if (conditon) 
+            {
+                //block of code if conditon is true in ()
+            } 
+            else if (conditon) 
+            {
+                //block of code if conditon is true in ()
+            }
+            else 
+            {
+                //block of code if conditon is false in ()
+            }
+        </code>
+    </pre>
+
+    <!-- actual code printing block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        let number = 10;
+
+        if (number < 5) 
+        {
+            document.write("The number is less than 5");
+        } 
+        else if (number < 15) 
+        {
+            document.write("The number is less than 15");
+        }
+        else 
+         {
+            document.write("The number is 15 or greater");
+        }   
+        </code>
+    </pre>
+
+        <script>
+             document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+        let number = 10;
+
+        if (number < 5) 
+        {
+            document.write("The number is less than 5");
+        } 
+        else if (number < 15) 
+        {
+            document.write("The number is less than 15");
+        }
+        else 
+         {
+            document.write("The number is 15 or greater");
+        }
+        </script>
+</body>
+</html>

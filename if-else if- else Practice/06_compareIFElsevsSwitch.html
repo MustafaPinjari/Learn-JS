@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else If-Else Statement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+        }
+        pre {
+            background-color: rgb(28, 22, 22);
+            width: 650px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+        If-Else If-Else vs. Switch Statement
+    </h1>
+    <p>
+        This document compares the performance implications of using multiple <code>else if</code> statements versus a <code>switch</code> statement in JavaScript.
+    </p>
+    <label for="pre"><b>Question: Compare the performance implications of using multiple else if versus a switch statement</b></label><br>
+    
+    <!-- Comparison Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Criteria</th>
+                <th>Else If Statements</th>
+                <th>Switch Statement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Execution Speed</td>
+                <td>Checks conditions sequentially. Slower with many conditions.</td>
+                <td>May use a jump table for faster execution with many cases.</td>
+            </tr>
+            <tr>
+                <td>Optimizations</td>
+                <td>Optimized by JS engine, but linear checks can be slower.</td>
+                <td>Can be optimized better by JS engine for discrete values.</td>
+            </tr>
+            <tr>
+                <td>Data Type Handling</td>
+                <td>Handles complex conditions and various data types.</td>
+                <td>Best with simple expressions and values (numbers, strings).</td>
+            </tr>
+            <tr>
+                <td>Readability</td>
+                <td>Less readable with many conditions.</td>
+                <td>More readable with many discrete values.</td>
+            </tr>
+            <tr>
+                <td>Maintainability</td>
+                <td>Harder to maintain with many conditions.</td>
+                <td>Easier to maintain and add/remove cases.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Syntax print block -->
+    <pre>
+        <code class="language-javascript">
+            // Example using else if statements
+            let value = 3;
+            if (value === 1) {
+                console.log("Value is 1");
+            } else if (value === 2) {
+                console.log("Value is 2");
+            } else if (value === 3) {
+                console.log("Value is 3");
+            } else if (value === 4) {
+                console.log("Value is 4");
+            } else {
+                console.log("Value is unknown");
+            }
+
+            // Example using switch statement
+            switch (value) {
+                case 1:
+                    console.log("Value is 1");
+                    break;
+                case 2:
+                    console.log("Value is 2");
+                    break;
+                case 3:
+                    console.log("Value is 3");
+                    break;
+                case 4:
+                    console.log("Value is 4");
+                    break;
+                default:
+                    console.log("Value is unknown");
+            }
+        </code>
+    </pre>
+
+    <!-- actual code printing block -->
+    <pre>
+        <code class="language-javascript">
+            // Example using else if statements
+            let value = 3;
+            if (value === 1) {
+                console.log("Value is 1");
+            } else if (value === 2) {
+                console.log("Value is 2");
+            } else if (value === 3) {
+                console.log("Value is 3");
+            } else if (value === 4) {
+                console.log("Value is 4");
+            } else {
+                console.log("Value is unknown");
+            }
+
+            // Example using switch statement
+            switch (value) {
+                case 1:
+                    console.log("Value is 1");
+                    break;
+                case 2:
+                    console.log("Value is 2");
+                    break;
+                case 3:
+                    console.log("Value is 3");
+                    break;
+                case 4:
+                    console.log("Value is 4");
+                    break;
+                default:
+                    console.log("Value is unknown");
+            }
+        </code>
+    </pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+</html>

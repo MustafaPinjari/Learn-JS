@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If -else if -else Statement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<style>
+    body{
+        background-color: rgb(43, 42, 42);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+    <h1 style="justify-content: left;">Syntax of if - else if - else statment</h1>
+    <p>if the conditon if `if` block is true then only the code of `if` block will executed <br>
+    if it is false then program will execute the code of `else if` block <br> 
+    if it is false then program will execute the code of `else` block
+    </p>
+    
+    
+    <label for="pre"><b>Question : What is the syntax for an if-else if -else statement in javascript</b></label><br>
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        if(condition)
+        {
+            //Block of Code to be executed if condion is true in ()
+        }
+        else if(condition)
+        {
+            //Block of Code to be executed if condion is true in ()
+        }
+        else
+        {
+            //Block of code if condition is false in ()
+        }
+        </code>
+    </pre>
+        <script>
+             document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+        </script>
+</body>
+</html>

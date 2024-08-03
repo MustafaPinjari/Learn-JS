@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If -else if -else Statement</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(43, 42, 42);
+        color: white;
+      }
+      .container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="justify-content: left">
+      Example of if -else if -else statement in javascript
+    </h1>
+    <p>
+      we are going to take an example of if -else if -else statement in
+      javascript to demonstrate how mush time we can use if -else if -else
+      statement in javascript
+    </p>
+
+    <p>
+      In JavaScript ,you can chain together as many `else-if` conditions as you
+      need there is no inherent limit to the number of `else if` condition you
+      can use in an `if` statement. Each `else if` condition will be evaluated
+      in sequence ,and once a condition evaluates to `true`,the corresponding
+      block of codes will be executed ,and the rest of the conditions will be
+      ignored
+    </p>
+    <label for="pre"
+      ><b
+        >Question : How many conditions can you chain together using else if in
+        JavaScript?</b
+      ></label
+    ><br />
+
+    <div class="container">
+      <!-- Syntax print block -->
+      <pre>
+            <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                if(condition)
+                {
+                    //Block of Code to be executed if condion is true in ()
+                }
+                else if(condition)
+                {
+                    //Block of Code to be executed if condion is true in ()
+                }
+                
+                .
+                .
+                .
+                .
+                .
+                
+                else
+                {
+                    //Block of code if condition is false in ()
+                }
+    </code>
+</pre>
+      <!-- actual code printing block -->
+      <pre>
+    <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        var temp = 18;
+        
+        if(temp >=35)
+        {
+            document.write("It's Extremely Hot outside");
+        }
+        else if(temp >=30)
+        {
+            document.write("It's very Hot outside");
+        }
+        else if(temp >=25)
+        {
+            document.write("It's Hot outside");
+        }
+        else if(temp >=20)
+        {
+            document.write("It's Nice outside");
+        }
+        else if(temp >= 15)
+        {
+            document.write("It's Cold outside");
+        }
+        else
+        {
+            document.write("It's Extremely Cold outside");
+        }
+    </code>
+</pre>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+
+      var temp = 18;
+
+      if (temp >= 35) {
+        document.write("It's Extremely Hot outside");
+      } else if (temp >= 30) {
+        document.write("It's very Hot outside");
+      } else if (temp >= 25) {
+        document.write("It's Hot outside");
+      } else if (temp >= 20) {
+        document.write("It's Nice outside");
+      } else if (temp >= 15) {
+        document.write("It's Cold outside");
+      } else {
+        document.write("It's Extremely Cold outside");
+      }
+    </script>
+  </body>
+</html>
