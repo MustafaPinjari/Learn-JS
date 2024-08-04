@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else If-Else Statement Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+        Example of if-else if-else Statement in JavaScript
+    </h1>
+    <p>
+        We are going to take an example of if-else if-else statement in JavaScript that checks the value of a variable. In this case, we will determine the category of a person based on their age.
+    </p>
+    
+    <label for="pre"><b>Question: Implement a scenario where you would prefer using a chain of if-else if-else statements over a switch statement.</b></label><br>
+    
+    <!-- Syntax print block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        if (condition) {
+            // Block of code to be executed if condition is true
+        } else if (condition) {
+            // Block of code to be executed if the previous condition is false and this condition is true
+        } else {
+            // Block of code to be executed if all conditions are false
+        }
+        </code>
+    </pre>
+    
+    <!-- Actual code printing block -->
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+        function determineAgeCategory(age) {
+            if (age < 0) {
+                return "Invalid age";
+            } else if (age <= 12) {
+                return "Child";
+            } else if (age <= 19) {
+                return "Teenager";
+            } else if (age <= 64) {
+                return "Adult";
+            } else {
+                return "Senior";
+            }
+        }
+        
+        // Example usage:
+        let age = 45;
+        document.write(determineAgeCategory(age)); // Output: "Adult"
+        </code>
+    </pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+        function determineAgeCategory(age) {
+            if (age < 0) {
+                return "Invalid age";
+            } else if (age <= 12) {
+                return "Child";
+            } else if (age <= 19) {
+                return "Teenager";
+            } else if (age <= 64) {
+                return "Adult";
+            } else {
+                return "Senior";
+            }
+        }
+
+        // Example usage:
+        let age = 45;
+        document.write(determineAgeCategory(age)); // Output: "Adult"
+    </script>
+</body>
+</html>

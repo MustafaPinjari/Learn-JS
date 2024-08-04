@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If -else if -else Statement</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(43, 42, 42);
+        color: white;
+      }
+      .container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+        Conflicts in conditions within an if-else if-else chain
+    </h1>
+   
+    <label for="pre">
+        <b>Question :How does JavaScript handle ambiguities or conflicts in conditions within an if-else if-else chain?</b>
+    </label>
+    <br/>
+
+    <p>
+        In JavaScript ,ambiguities or conflicts within in `if -else if -else` chain are resolved based on the order of evaluation and the structure of the statements.
+        Here's how JavaScript handles different scenarios :
+    </p>
+
+
+
+    <ol>
+        <li>
+            <b>
+            Evaluation Order: 
+            </b>
+            <br>
+                JavaScript evaluates condition in an `if -else if-else` chain sequqntially from top to bottom. Once a condition is found to be `true`,the corresponding block of code is executed
+                and the rest of the conditions are skipped.          
+        
+                <label for="pre">
+                    <b>Example : </b>
+                </label>
+
+                <pre>
+                    <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                        let x =  10;
+                            if(x>5)
+                            {
+                              document.write("X is greater than 5");
+                            }
+                            else if(x>0)
+                            {
+                              document.write("X is greater than 0");
+                            }
+                        
+                            else
+                            {
+                              document.write("X is less than or equal to 0");
+                            }
+                    </code>
+                </pre>
+                <ul>
+                    <li>Scenerio : `x` is 10.</li>
+                    <li>Evaluation : <br>
+                        <ul>
+                          <li>First condition (`x>5`) is `true` ,so `"x is greater than 5"` is logged</li>
+                          <li>Subsequent condition (`x>0`) and the `else` block are not evaluates or executed</li>
+                        </ul>
+                    </li>
+                </ul>
+        </li>
+        <!-- 2 -->
+        <li>
+          <b>
+            Conflicting Conditions : 
+            </b>
+            <br>
+                When conditions conflicts or overlap ,the first condition that evaluates to `true`
+                determine the execution path. Subsequent conditions are ignored even if they might also evaluate to `true`.         
+                <label for="pre">
+                    <b>Example : </b>
+                </label>
+
+                <pre>
+                    <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                      let y = 6 ;
+                      if(y>5)
+                      {
+                        document.write("y is greater than 5");
+                      }
+                      else if(y>3)
+                      {
+                        document.write("y is greater than 3");
+                      }
+                      else
+                      {
+                        document.write("y is less than or equal to 3");
+                      }
+                    </code>
+                </pre>
+                <ul>
+                    <li>Scenerio : `y` is 6.</li>
+                    <li>Evaluation : <br>
+                        <ul>
+                          <li>First condition (`y > 5`) is `true` ,so `"y is greater than 5"` is logged</li>
+                          <li>The condition in the `else if`(`y > 3`) is not evaluated or executed</li>
+                        </ul>
+                    </li>
+                </ul>
+        
+        </li>
+        <!-- 3 -->
+        <li>
+          <b>
+            Mutually Exclusive Conditions : 
+            </b>
+            <br>
+                If conditions are mutually exclusive (i.e. ,only one condition can be true at a time),
+                JavaScript ensures that only one block of code i executed based on the first true condition encountered
+                <label for="pre">
+                    <b>Example : </b>
+                </label>
+
+                <pre>
+                    <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                      let z = 2;
+                      if(z > 5)
+                        {
+                          document.write("z is greater than 5");
+                        }
+                      else if(z > 3)
+                        {
+                          document.write("z is greater than 3");
+                        }
+                      else if(z > 0)
+                        {
+                          document.write("z is greater than 0");
+                        }
+                      else
+                        {
+                          document.write("z is less than or equal to 0");
+                        }
+                    </code>
+                </pre>
+                <ul>
+                    <li>Scenerio : `Z` is 2.</li>
+                    <li>Evaluation : <br>
+                        <ul>
+                          <li>None of the condition (`z > 5` , `z > 3` , `z > 0` ) is `true` ,so the  `else` block is executed ,logging `"z is less than or equal to 0"`</li>
+                        </ul>
+                    </li>
+                </ul>
+        
+        </li>
+    </ol>
+    <h2><b>Summary</b></h2>
+    <p>
+      JavaScript resolves ambiguities or conflicts in conditions within an if-else if-else chain by evaluating conditions sequentially and executing the block associated with the first condition that evaluates to true. Subsequent conditions are skipped, regardless of whether they might also evaluate to true. This sequential evaluation ensures predictable behavior and helps in managing complex conditional logic effectively.
+    </p>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+
+        
+    </script>
+  </body>
+</html>
