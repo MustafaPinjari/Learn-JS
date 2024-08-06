@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Nav Bar */
+nav {
+    background-color: #004880;
+    width: 100%;
+    padding: 10px 0; /* Padding for top and bottom */
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 50px;
+    margin: 0 1px;
+}
+
+nav .group {
+    display: flex;
+    align-items: center;
+}
+
+nav .input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Card Styles */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    margin-top: 60px; /* Adjust for fixed navbar height */
+    padding: 20px;
+}
+
+.card {
+    width: 300px; /* Adjust to take full width of grid column */
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    border: 1px solid transparent;
+    overflow: hidden; /* Ensure child elements don't overflow */
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.image {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px; /* Rounded corners */
+    background-size: cover; /* Ensure the image covers the div */
+    background-position: center; /* Center the image */
+    background-position: center;
+    padding-top: 10px;
+    margin-left: 25px;
+    /* border: 3px solid black; */
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2563EB;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
