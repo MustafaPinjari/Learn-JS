@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+            color: white;
+            flex-direction: column;
+            justify-content: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+        Purpose of the switch statement in JavaScript
+    </h1>
+    <p>
+        The `switch` statement in JavaScript is used for making decisions based on the values of an expression. It allows you to compare a single expression against multiple possible cases,executing different blocks of <br>
+        code  depending on which case matches .This can make your code more readable and easier to manage compared to using multipe `if....else if...else` statements
+    </p>
+    
+    <label for="pre"><b>Question : What is the purpose of the switch statement in JavaScript?</b></label><br>
+    <h2><b>Purpose and usage</b></h2>
+    <label for="pre"><b>Answer : </b></label><br>
+    <p>phele day number ko define karege then hum switch statement ka use karege  usske under 7 case banayege  har case m uska uska day number define <br>
+        kardege aur har block m break use karge taki case aage badte rahe.
+        default case m hum print karege agar user koi aur value dalega 1-7 ke ilawa.
+    </p>
+    <!-- Syntax print block -->
+
+    <label for="pre"><b>Syntax : </b></label><br>
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            switch (Expression) 
+            {
+                case value1:
+                    // code to execite when expression === value1
+                    break;
+    
+                case value2:
+                    // code to execite when expression === value2
+                    break;
+                .
+                .
+                .
+    
+                default:
+                    // code to execute if none of the cases match
+                    break;
+            }
+        </code>
+    </pre>
+    
+    <!-- Actual code printing block -->
+    <label for="pre"><b>Example : </b></label><br>
+    <pre>
+        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+            var day = 5;
+            var dayName;
+     
+            switch (day) {
+             case 1:
+                 dayName = "Monday";
+                 break;
+     
+             case 2:
+                 dayName = "Tuesday";
+                 break;
+     
+             case 3 :
+                 dayName = "Wednesday";
+                 break;
+     
+             case 4:
+                 dayName = "Thursday";
+                 break;
+     
+             case 5:
+                 dayName = "Friday";
+                 break;
+     
+             case 6:
+                 dayName = "Saturday";
+                 break;
+             
+             case 7:
+                 dayName = "Sunday";
+                 break;
+     
+             default:
+                 dayName = "Invalid day";
+                 break;
+            }
+            document.write(dayName);
+        </code>
+    </pre>
+
+    </ol>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+
+    </script>
+</body>
+</html>
