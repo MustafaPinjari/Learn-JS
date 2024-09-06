@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+            color: white;
+            flex-direction: column;
+            justify-content: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="justify-content: left;">
+      Switch Over if-else statement
+    </h1>
+    <p>
+        In javaScript ,both `break` and `return` serve distinct purpose inside a `switch` statement, but tgey fundamentally affect control flow in different ways :
+    </p>
+    
+    <label for="pre"><b>Question : Discuss scenarios where you might prefer using a switch statement over multiple if-else
+        statements?</b></label><br>
+    <label for="pre"><b>Answer : </b></label><br>
+    <p>
+        <b>`break` Statment :</b>
+        <ul>
+            <li>
+                <b>
+                    Usage :
+                </b>
+                In a `switch` statment, `break` is used to exit the switch block. When Javascript
+                encounters a `break` statement inside a `switch` case, it exits the `switch` statment entirely.
+            </li>
+            <li>
+                <b>
+                    Effect :
+                </b>
+                It Prevents fall-through behavior. where without a `break`, execution would contine to the next `case` regardless of whether its condition is met.
+            </li>
+            <li>
+                <label for="pre"><b>Example : </b></label><br>
+                    <pre>
+                        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                            switch (Expression) 
+                            {
+                                case value1:
+                                    // code to execite when expression === value1
+                                    break;
+                            
+                                case value2:
+                                    // code to execite when expression === value2
+                                    break;
+                                .
+                                .
+                                .
+                            
+                                default:
+                                    // code to execute if none of the cases match
+                                    break;
+                            }
+                        </code>
+                    </pre>
+            </li>
+        </ul>
+    </p>
+    <!--  -->
+    <p>
+        <b>`return` Statment :</b>
+        <ul>
+            <li>
+                <b>
+                    Usage :
+                </b>
+                return is used to end the execution of a function and optionally return a value.
+            </li>
+            <li>
+                <b>
+                    Effect :
+                </b>
+                When used inside a switch case, return exits not just the switch block, but also the entire enclosing function where the switch statement is located.
+            </li>
+            <li>
+                <label for="pre"><b>Example : </b></label><br>
+                    <pre>
+                        <code class="language-javascript" style="background-color: rgb(28, 22, 22); width: 650px; border-radius: 20px;">
+                            function dayOfWeek(day) {
+                                switch (day) {
+                                  case 1:
+                                    return "Sunday";
+                                  case 2:
+                                    return "Monday";
+                                  default:
+                                    return "Other day";
+                                }
+                              }
+                              
+                        </code>
+                    </pre>
+            </li>
+        </ul>
+    </p>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+</html>
