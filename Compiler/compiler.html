@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Compiler</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Monaco Editor CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.28.1/min/vs/loader.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <span id="file-name">main.js</span>
+        </div>
+        <div class="header-right">
+            <button id="fullscreen-btn" class="btn header-btn">⛶ </button>
+            <button id="theme-toggle-btn" class="btn header-btn">🌙 </button>
+            <button id="share-btn" class="btn header-btn">🔗 </button>
+            <button id="run-btn" class="btn header-btn">▶</button>
+            <button id="clear-btn" class="btn header-btn">✖</button>
+            <a id="download-btn" class="btn header-btn" download="main.js">⬇️</a>
+        </div>
+    </header>
+
+    <div class="editor-output-container">
+        <div class="editor-box">
+            <div id="code-editor"></div>
+        </div>
+        <div class="output-box">
+            <h2>Output</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,141 +1,250 @@
-
 :root {
-    --main-blue:  rgba(255, 255, 255, 0.023);; 
+    --main-blue: #000000;
     --text-color: #ffffff;
-    --font-size: calc(0.3 * var(--m));
-    --button-color : #01481a; 
+    --font-size: 16px;
+    --button-color: #01481a;
+    --primary-color: #00bcd4;
+    --accent-color: #ff5722;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+
+/* Remove any body margins and ensure it fills the screen */
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Allow vertical scrolling if necessary */
     background-color: #000000;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensure padding and borders are contained */
 }
 
-/* Nav Bar */
+/* Navbar */
 nav {
     background-color: var(--main-blue);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
     width: 80%;
-    padding: 10px 0; /* Padding for top and bottom */
-    position: fixed; /* Fixed position to keep it at the top */
-    top: 10px;
-    left: 150px;
-    align-content: center;
-    justify-content: center;
     border-radius: 40px;
+    top: 10px;
+    left: 10%;
+    justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px 0 rgb(255, 255, 255);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border: #ffffff solid 1px;
 }
 
+/* Navbar container */
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-nav a {
-    color: #fff;
+nav .brand {
+    color: #ffffff;
+    font-size: 1.4rem;
     text-decoration: none;
-    text-align: center;
-    padding: 10px 50px;
-    margin: 0 1px;
+    margin-right: auto;
 }
 
-.nav a:hover {
-color: #01481a;
+nav .menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+    flex-grow: 1;
 }
-nav .group {
+
+nav .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .menu a:hover {
+    color: var(--accent-color);
+}
+
+nav .search {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 nav .input {
-    padding: 10px;
-    border:solid 2px #01481a;
-    border-radius: 20px;
+    padding: 8px 12px;
+    border: 2px solid var(--button-color);
+    border-radius: 25px;
+    outline: none;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: transparent;
 }
 
-/* Card Styles */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    gap: 20px; /* Space between cards */
+nav .fas.fa-search {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 60px; /* Adjust for fixed navbar height */
-    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    background-color: var(--button-color);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Carousel Section */
+/* Carousel for Cards */
+.carousel {
+    position: relative;
+    padding: 40px 0; /* Adjust padding to avoid overflow */
+    overflow: hidden; /* Hide both x and y scrollbars */
+    align-content: center;
+    margin-left: 10%;
+    width: 1200px; /* Full width, ensuring no horizontal overflow */
+    max-width: 100vw; /* Ensuring carousel doesn't extend beyond viewport */
+}
+
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Ensure no scrollbars appear */
+    padding: 0 8px; /* Reduce padding to avoid overflow */
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding: 0;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: hidden; /* Ensure horizontal scroll is hidden */
+    max-width: 100%; /* Restrict width to prevent overflow */
 }
 
 .card {
-    width: 300px; /* Adjust to take full width of grid column */
-    border-radius: 0.5rem;
-    background-color: var(--main-blue);
-    box-shadow: 0 1px 2px 0 rgb(255, 255, 255);
-    border: 1px solid transparent;
-    overflow: hidden; /* Ensure child elements don't overflow */
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px var(--shadow-color);
+    flex: 0 0 auto;
+    width: 300px; /* Reduced width to prevent overflow */
+    height: 350px; /* Fixed height to ensure consistent size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and borders don't affect the width */
 }
 
-.card a {
-    text-decoration:none;
-}
-
-.content {
-    padding: 1.1rem;
-}
-
-.image {
-    width: 250px;
-    height: 150px;
-    border-radius: 10px; /* Rounded corners */
-    background-size: cover; /* Ensure the image covers the div */
-    background-position: center; /* Center the image */
+.card .image {
+    height: 150px; /* Set height for image to maintain consistency */
+    background-size: cover;
     background-position: center;
-    padding-top: 10px;
-    margin-left: 25px;
-    border: 3px solid rgb(255, 255, 255);
-    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
-    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
-.title {
-    color: var(--button-color);
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    font-weight: 600;
+.card .content {
+    padding: 15px;
+    height: 150px; /* Set a fixed height for the content area */
+    overflow: hidden; /* Hide overflowing text if it exceeds this height */
 }
 
-.desc {
-    margin-top: 0.5rem;
-    color: var(--text-color);;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+.card .title {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
-.action {
-    display: inline-flex;
-    margin-top: 1rem;
-    color: #ffffff;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-    align-items: center;
-    gap: 0.25rem;
-    background-color: var(--button-color);
-    padding: 4px 8px;
-    border-radius: 4px;
+.card .desc {
+    font-size: 0.9rem;
+    color: #cccccc;
+    line-height: 1.2em;
+    max-height: 2.4em; /* Limits description to two lines */
+    overflow: hidden;
 }
 
-.action span {
-    transition: .3s ease;
+.card .action {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
 }
 
-.action:hover span {
-    transform: translateX(4px);
+.card .action:hover {
+    text-decoration: underline;
+}
+
+/* General Fixes for Scrollbars */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove any excess space that could create scrollbars */
+.carousel-wrapper, .cards-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%; /* Ensure no extra space is added */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-in-out;
 }
